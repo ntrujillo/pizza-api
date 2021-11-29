@@ -1,4 +1,4 @@
-# PIZZA API
+# PIZZA API SERVERLESS
 
 ## Requirements
 
