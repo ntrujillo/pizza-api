@@ -2,10 +2,9 @@
 
 ## Requirements
 
+- NodeJS
 - AWS account credentials
 - User claudia on AWS IAM created and configured
-- nodeJS
-- claudia install globally (npm install -g claudia)
 
 
 ## Create API
