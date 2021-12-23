@@ -40,3 +40,18 @@ aws cognito-idp create-user-pool --region us-east-1 --pool-name Pizzeria \
 --username-attributes email \
 --query UserPool.Id --output text
 
+## Creating a client for the user pool
+
+aws cognito-idp create-user-pool-client \
+--user-pool-id POOL_ID \
+--client-name PizzeriaClient \
+--no-generate-secret \
+--query UserPoolClient.ClientId --output text
+
+## Creating and Identity Pool
+
+aws cognito-identity create-identity-pool --identity-pool-name Pizzeria \
+--allow-unauthenticated-identities \
+--supported-login-providers graph.facebook.com=FACEBOOK_APP_ID \
+--cognito-identity-providers ProviderName=cognito-idp.us-east-1.amazonaws.com/POOL_ID,ClientId=CLIENT_ID,ServerSideTokenCheck=false \
+--query IdentityPoolId --output text
