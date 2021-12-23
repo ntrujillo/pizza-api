@@ -15,7 +15,8 @@ function createOrder(request) {
             pickupTime: '15.34pm',
             pickupAddress: 'Aunt Maria Pizzeria',
             deliveryAddress: request.address,
-            webhookUrl: 'https://whpcvzntil.execute-api.eu-central-1.amazonaws.com/chapter4_1/delivery'
+            webhookUrl: 'https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/delivery',
+            webhook: 'https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/delivery'
         })
     }).then(rawResponse => JSON.parse(rawResponse.body))
         .then(response => {

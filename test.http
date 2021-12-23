@@ -1,0 +1,20 @@
+#### Get Orders
+curl -i -H "Content-Type:application/json" -X GET https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/orders
+
+#### Get byOrderId
+curl -i -H "Content-Type:application/json" -X GET \
+https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/orders/b7d53d40-242d-4fd6-b605-bacf1c9f7476
+#### Create Order
+curl -i -H "Content-Type:application/json" -X POST -d '{"pizza":4, "address":"221B Baker Street"}' \
+https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/orders/
+
+#### Update Order
+curl -i -H "Content-Type: application/json" -X PUT -d '{"pizza": 2, "address" : "221 b Baker Street"}' \
+https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/orders/accbc984-0ff0-4d91-b3c5-daf55c3885cc
+
+#### Delete Order
+curl -i -H "Content-Type: application/json" -X DELETE https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/orders/f3dab1fd-9225-427a-ad97-6b81c3a5449e
+
+#### Update Delivery Status
+curl -i -H "Content-Type: application/json" -X POST -d '{"deliveryId":"4bba8612-42e2-474d-8d74-af7f9c1ff187", "status":"DELIVERED"}' \
+https://btz3l6l6n2.execute-api.us-east-1.amazonaws.com/latest/delivery

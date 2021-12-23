@@ -13,7 +13,7 @@ function updateDeliveryStatus(request) {
             orderId: request.deliveryId
         },
         AttributeUpdates: {
-            deliveryStatus: {
+            orderStatus: {
                 Action: 'PUT',
                 Value: request.status
             }
